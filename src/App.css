@@ -15,4 +15,23 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem 0;
 }
 
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #343a40;
+  border-radius: 10px;
+  padding: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #267dd3;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+
+
+
 
