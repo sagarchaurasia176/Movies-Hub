@@ -9,6 +9,7 @@ const App = () => {
     <div className=" bg-slate-800  flex  w-screen h-screen">
         <Routes>
           <Route path="/" element={<HomeComponents/>}></Route>
+          
         </Routes>
     </div>
     </>
