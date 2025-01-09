@@ -36,7 +36,7 @@ const HeaderComponent = () => {
         backgroundSize: "cover", // Makes the background image responsive
         backgroundPosition:"center", // Ensures the image is centered
       }}
-      className="w-full h-[50vh] flex  flex-col  justify-end  p-12 text-white"
+      className="w-full  flex  flex-col  justify-end  p-12 text-white"
     >
       {/* Content overlay */}
       <div className="text-center">

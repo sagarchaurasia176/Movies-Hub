@@ -5,6 +5,7 @@ import reqFromApi from "../utils/SingReqToTmdb";
 import toast from "react-hot-toast";
 import HeaderComponent from "./HeaderComponent";
 import HorizontalComponent from "./HorizontalComponent";
+import { useMemo } from "react";
 
 const TopHeaderComponent = () => {
   // searchText
@@ -22,6 +23,7 @@ const TopHeaderComponent = () => {
       console.log(er);
     }
   };
+
 
   useEffect(() => {
     if (movieText) {
