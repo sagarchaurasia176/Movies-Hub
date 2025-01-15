@@ -3,8 +3,7 @@ import { RiCloseFill, RiSearchLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import reqFromApi from "../utils/SingReqToTmdb";
 import toast from "react-hot-toast";
-import HeaderComponent from "./HeaderComponent";
-import HorizontalComponent from "./HorizontalComponent";
+
 import { useMemo } from "react";
 
 const TopHeaderComponent = () => {
@@ -34,7 +33,7 @@ const TopHeaderComponent = () => {
   }, [movieText]);
 
   return (
-    <div className="relative w-full h-[8vh]  shadow-md">
+    <div className="relative w-full h-[8vh] ">
       <div className="flex items-center w-full max-w-4xl mx-auto px-4 p-4">
         <RiSearchLine className="text-2xl text-gray-600" />
         <input
@@ -52,7 +51,7 @@ const TopHeaderComponent = () => {
         )}
       </div>
       {search && (
-        <div className="absolute w-[64%]  max-h-[80vh]  top-[-40rem]  overflow-y-auto ml-[15rem] text-black mt-[45rem] bg-white shadow-lg border-t border-gray-200 z-50">
+        <div className="absolute w-[64%]  max-h-[80vh]  top-[-40rem]  overflow-y-auto ml-[15rem] text-black mt-[45rem] bg-white  border-t border-gray-200 z-50">
           {search.map((value, index) => (
             <Link
               key={index}
@@ -72,11 +71,6 @@ const TopHeaderComponent = () => {
         </div>
       )}
 
-
-  {/*Header banner get image */}
-        <HeaderComponent/>
-    {/* Horizontal */}
-      <HorizontalComponent/>
     </div>
   );
 };

@@ -31,7 +31,7 @@ const SideBar = () => {
         {/* next feed */}
         <nav className=" flex flex-col  text-zinc-400 text-xl gap-3">
           <h1 className=" text-white font-semibold  mt-10 mb-5 ">New Feeds</h1>
-          <Link className=" hover:bg-purple-300 hover:text-white  rounded-lg  duration-300 p-5 flex items-center gap-2">
+          <Link to='/Trending' className=" hover:bg-purple-300 hover:text-white  rounded-lg  duration-300 p-5 flex items-center gap-2">
             <RiFireLine /> Trending
           </Link>
           <Link className=" hover:bg-purple-300 hover:text-white  rounded-lg  duration-300 p-5 flex items-center gap-2">
