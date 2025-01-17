@@ -13,6 +13,8 @@ const Trending = () => {
   const [categ, setCateg] = useState("all");
   const [duration, setDuration] = useState("day");
   const [trend, setTrend] = useState([]);
+  const[page,setPage]  = useState(1);
+
 
   const TrendingHandler = async () => {
     try {
@@ -21,11 +23,14 @@ const Trending = () => {
       const category  = categ === 'all' ? categ : categ.toLowerCase();
       const durations = duration === 'day' ? duration : duration.toLowerCase();
 
+      // Fetched data applied it here ~
       const { data } = await reqFromApi.get(`trending/${category}/${durations}`);
       if (data?.results) {
         // Store the results in the state
         setTrend(data.results);
-        console.log(data.results);
+        console.log(data)
+        //also take it prev data
+        setTrend((prev)=>([...prev , ...data.results]));
       } else {
         console.warn("No results found.");
         setTrend([]); // Clear the state if no results
@@ -37,9 +42,11 @@ const Trending = () => {
   // Categ,duration
   useEffect(() => {
     TrendingHandler();
-  }, [categ, duration]);
+  }, [categ, duration , page]);
 
   return (
+
+  
     <div className=" w-full text-zinc-800">
       {/* Header Section */}
       <div className="flex  bg-slate-900 px-4 rounded-2xl items-center">
