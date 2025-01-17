@@ -7,11 +7,10 @@ import Trending from "./Components/Trending";
 const App = () => {
   return (
     <>
-    <div className=" bg-slate-800  flex  w-screen h-screen">
+    <div className=" bg-slate-950  flex">
         <Routes>
           <Route path="/" element={<HomeComponents/>}></Route>
           <Route path="/Trending" element={<Trending/>}></Route>
-          
         </Routes>
     </div>
     </>

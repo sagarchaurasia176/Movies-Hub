@@ -5,7 +5,7 @@ import HeaderComponent from './HeaderComponent'
 
 const GlobalComponentFromRghtSide = () => {
   return (
-    <div>
+    <div className=''>
         <TopHeaderComponent/>
         <HeaderComponent/>
         <HorizontalComponent/>
